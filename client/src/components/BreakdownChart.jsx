@@ -23,8 +23,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
   );
   return(
     <Box height={isDashboard ? "400px" : "100%"} width={undefined} minHeight={isDashboard ? "325px" : undefined} minWidth={isDashboard ? "325px" : undefined} position="relative">
-      <ResponsivePie data={formattedData} 
-				theme={{
+      <ResponsivePie data={formattedData}  theme={{
           axis: {
             domain: {
               line: {
@@ -94,19 +93,16 @@ const BreakdownChart = ({ isDashboard = false }) => {
             itemOpacity: 1,
             symbolSize: 18,
             symbolShape: "circle",
-            effects: [
-              {
-                on: "hover",
-                style: {
-                  itemTextColor: theme.palette.primary[500],
-                },
-              },
-            ],
+            effects: [{
+							on: "hover",
+							style: {
+								itemTextColor: theme.palette.primary[500],
+							},
+						}],
           },
         ]}
       />
-      <Box position="absolute" top="50%" left="50%" color={theme.palette.secondary[400]} textAlign="center" pointerEvents="none"
-        sx={{
+      <Box position="absolute" top="50%" left="50%" color={theme.palette.secondary[400]} textAlign="center" pointerEvents="none" sx={{
 					transform: isDashboard ? "translate(-75%, -170%)" : "translate(-50%, -100%)",
 				}}
       >

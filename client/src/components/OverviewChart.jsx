@@ -99,8 +99,7 @@ const OverviewChart = ({
         max: "auto",
         stacked: false,
         reverse: false,
-      }}
-      yFormat=" >-.2f" curve="catmullRom" enableArea={isDashboard} axisTop={null} axisRight={null} axisBottom={{
+      }} yFormat=" >-.2f" curve="catmullRom" enableArea={isDashboard} axisTop={null} axisRight={null} axisBottom={{
         format: (v) => {
           if(isDashboard) 
 						return v.slice(0, 3);

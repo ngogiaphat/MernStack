@@ -1,7 +1,7 @@
 import {setMode} from "state";
 import React, {useState} from "react";
 import {useDispatch} from "react-redux";
-import profileImage from "assets/profile.jpeg";
+import profileImage from "assets/Cam.jpg";
 import FlexBetween from "components/FlexBetween";
 import {AppBar, Button, Box, Typography, IconButton, InputBase, Toolbar, Menu, MenuItem, useTheme} from "@mui/material";
 import {LightModeOutlined, DarkModeOutlined, Menu as MenuIcon, Search, SettingsOutlined, ArrowDropDownOutlined} from "@mui/icons-material";
@@ -31,7 +31,7 @@ const Navbar = ({user, isSidebarOpen, setIsSidebarOpen}) => {
           <FlexBetween backgroundColor={theme.palette.background.alt} borderRadius="9px" gap="3rem"  p="0.1rem 1.5rem">
             <InputBase placeholder="Search..."/>
             <IconButton>
-              <Search />
+              <Search/>
             </IconButton>
           </FlexBetween>
         </FlexBetween>

@@ -1,7 +1,7 @@
 import React from "react";
 import FlexBetween from "./FlexBetween";
 import {useEffect, useState} from "react";
-import profileImage from "assets/profile.jpeg";
+import profileImage from "assets/Cam.jpg";
 import {useLocation, useNavigate} from "react-router-dom";
 import {Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, useTheme} from "@mui/material";
 import {
