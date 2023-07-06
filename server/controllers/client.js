@@ -1,8 +1,10 @@
 import User from "../models/User.js";
 import Product from "../models/Product.js";
+// @ts-ignore
 import getCountryIso3 from "country-iso-2-to-3";
 import ProductStat from "../models/ProductStat.js";
 import Transaction from "../models/Transaction.js";
+// @ts-ignore
 export const getProducts = async (req, res) => {
   try {
     const products = await Product.find();
@@ -12,6 +14,7 @@ export const getProducts = async (req, res) => {
           productId: product._id,
         });
         return {
+          // @ts-ignore
           ...product._doc,
           stat,
         };
@@ -25,6 +28,7 @@ export const getProducts = async (req, res) => {
 		});
   }
 };
+// @ts-ignore
 export const getCustomers = async (req, res) => {
   try {
     const customers = await User.find({ 
@@ -67,6 +71,7 @@ export const getTransactions = async(req, res) => {
 					},
 				},
       ],
+    // @ts-ignore
     }).sort(sortFormatted).skip(page * pageSize).limit(pageSize);
     const total = await Transaction.countDocuments({
       name: { 
@@ -82,6 +87,7 @@ export const getTransactions = async(req, res) => {
 		});
   }
 };
+// @ts-ignore
 export const getGeography = async(req, res) => {
   try {
     const users = await User.find();
